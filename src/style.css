@@ -1,0 +1,16 @@
+:root {
+  --primary: #7c3aed;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --link: #0d6efd;
+}
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.progress-bar {
+  background: var(--success);
+}
+.danger-bar {
+  background: var(--danger);
+}
