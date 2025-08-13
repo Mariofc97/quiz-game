@@ -2,6 +2,7 @@
   <div class="background-home">
     <div class="container py-4">
       <div class="text-center d-none d-md-block mt-4">
+        <h1>Welcome to</h1>
         <img :src="quizIconHome" class="img-fluid hero-img" alt="Quiz Icon" />
       </div>
 
@@ -41,6 +42,7 @@
               <ul class="mb-3">
                 <li>Difficulty</li>
                 <li>Streaks and missed answers</li>
+                <li>Each character will have a different ability per game</li>
               </ul>
               <RouterLink to="/register" class="btn btn-success">
                 <i class="bi bi-lightning-charge me-1"></i> Try Pro

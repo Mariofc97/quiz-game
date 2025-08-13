@@ -1,1 +1,3 @@
-<template><h2>Quiz</h2></template>
+<template>
+  <h2>Quiz</h2>
+</template>
