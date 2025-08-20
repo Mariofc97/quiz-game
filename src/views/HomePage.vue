@@ -16,12 +16,12 @@
             <div class="card-body">
               <h5 class="card-title">Start for free</h5>
               <p class="card-text">
-                Popular categories and saved scores in your profile.
+                Popular categories and saved scores in your profile:
               </p>
               <ul class="mb-3">
                 <li>Category-based quizzes</li>
                 <li>Score history</li>
-                <li>No ads</li>
+                <li>Limited tries</li>
               </ul>
               <RouterLink to="/register" class="btn btn-success">
                 <i class="bi bi-play-circle me-1"></i> Start now
@@ -38,15 +38,18 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">More control</h5>
-              <p class="card-text">Set difficulty.</p>
+              <p class="card-text">
+                The same conditions as Basic Plan but with:
+              </p>
               <ul class="mb-3">
-                <li>Difficulty</li>
-                <li>Streaks and missed answers</li>
-                <li>Each character will have a different ability per game</li>
+                <li>Unlimited tries</li>
+                <li>More Avatars</li>
               </ul>
-              <RouterLink to="/register" class="btn btn-success">
-                <i class="bi bi-lightning-charge me-1"></i> Try Pro
-              </RouterLink>
+              <div style="margin-top: 40px">
+                <RouterLink to="/register" class="btn btn-success">
+                  <i class="bi bi-lightning-charge"></i> Try Pro
+                </RouterLink>
+              </div>
             </div>
           </div>
         </div>

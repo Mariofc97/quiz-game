@@ -41,6 +41,14 @@
                 />
               </div>
 
+              <div class="mb-2">
+                <label class="form-label">Plan</label>
+                <select v-model="registerForm.plan" class="form-select">
+                  <option value="basic">Basic Plan</option>
+                  <option value="pro">Pro Plan</option>
+                </select>
+              </div>
+
               <input
                 class="form-control mb-2"
                 placeholder="Email"
@@ -83,6 +91,7 @@ export default {
         phoneNumber: "",
         email: "",
         password: "",
+        plan: "basic",
       },
       prefixes: [
         { value: "+34", name: "Spain" },
@@ -109,6 +118,9 @@ export default {
       delete user.countryCode;
       delete user.phoneNumber;
 
+      user.scores = []; // results history
+      user.quizzesUsed = 0; // quizzes counter
+
       const users = JSON.parse(localStorage.getItem("users") || "[]");
       if (users.some((u) => u.username === user.username)) {
         return alert("Username already");
@@ -125,6 +137,7 @@ export default {
         phoneNumber: "",
         email: "",
         password: "",
+        plan: "basic",
       };
     },
   },

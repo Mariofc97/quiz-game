@@ -11,7 +11,7 @@ const routes = [
   { path: "/", name: "home", component: HomePage },
   { path: "/categories", name: "categories", component: CategoriesPage },
   { path: "/categories/:id", name: "quiz", component: QuizPage },
-  { path: "/results", name: "results", component: ResultPage },
+  { path: "/result", name: "result", component: ResultPage },
   { path: "/profile", name: "profile", component: ProfilePage },
   { path: "/login", name: "login", component: LoginPage },
   { path: "/register", name: "register", component: RegisterPage },
@@ -24,11 +24,20 @@ const router = createRouter({
 });
 
 router.beforeEach((to) => {
-  // protect the access of routes, login for every page less home
+  const loggedIn = localStorage.getItem("loggedInUser");
+
+  if (loggedIn && (to.name === "login" || to.name === "register")) {
+    alert("You must log out in your profile");
+    return false;
+  }
+
+  // to protect the private pages in there is no session and no public return to home with a alert
   const publicPages = ["home", "login", "register"];
   const isPublic = publicPages.includes(to.name);
-  const loggedIn = localStorage.getItem("loggedInUser");
-  if (!isPublic && !loggedIn) return { name: "home" };
+  if (!isPublic && !loggedIn) {
+    alert("You must log in to access this page");
+    return { name: "home" };
+  }
 });
 
 export default router;

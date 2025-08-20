@@ -6,6 +6,7 @@
       <div class="container">
         <div class="collapse navbar-collapse">
           <div class="navbar-nav">
+            <router-link to="/" class="nav-link nav-anim">Home</router-link>
             <router-link to="/categories" class="nav-link nav-anim"
               >Quizzes</router-link
             >
@@ -38,7 +39,6 @@
   transition: color 0.2s ease;
 }
 
-/* línea “escondida” (escala 0) */
 .nav-anim::after {
   content: "";
   position: absolute;
@@ -52,7 +52,6 @@
   transition: transform 0.25s ease;
 }
 
-/* al pasar el ratón: color + subrayado animado */
 .nav-anim:hover {
   color: var(--link);
 }
@@ -60,7 +59,6 @@
   transform: scaleX(1);
 }
 
-/* estado activo del router (mantén subrayado y color) */
 .nav-anim.router-link-active,
 .nav-anim.router-link-exact-active {
   color: var(--link);
