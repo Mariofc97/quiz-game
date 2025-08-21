@@ -44,7 +44,7 @@ export default {
 }
 
 .ua-name {
-  max-width: 18ch;
+  color: var(--link);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

@@ -1,6 +1,5 @@
 <template>
   <div class="container my-4">
-    <!-- User avatar + username arriba a la derecha -->
     <div
       class="quiz-userbar d-flex justify-content-end align-items-center mb-2 gap-2"
     >

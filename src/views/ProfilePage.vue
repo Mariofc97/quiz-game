@@ -40,33 +40,6 @@
       </button>
     </div>
   </div>
-
-  <!-- SCORE SECTION -->
-  <div class="mt-5">
-    <h2 class="text-center fw-bold">Your Quiz Scores</h2>
-    <table
-      v-if="user.scores && user.scores.length > 0"
-      class="table table-hover table-striped mt-3 shadow-sm"
-    >
-      <thead class="table-dark">
-        <tr>
-          <th>Date</th>
-          <th>Category</th>
-          <th>Score</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(score, index) in user.scores" :key="index">
-          <td>{{ score.date }}</td>
-          <td>{{ score.category }}</td>
-          <td class="fw-bold text-primary">
-            {{ score.score }}/{{ score.total }} ({{ score.percentage }}%)
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <p v-else class="text-center text-muted">No quiz scores available.</p>
-  </div>
   <!-- PLAN SECTION -->
   <div class="mt-4">
     <h5 class="fw-bold">Your Plan</h5>
@@ -83,6 +56,33 @@
       <button class="btn btn-success" @click="applyPlanChange">
         Update Plan
       </button>
+    </div>
+
+    <!-- SCORE SECTION -->
+    <div class="mt-5 mb-5">
+      <h2 class="text-center fw-bold">Your Quiz Scores</h2>
+      <table
+        v-if="user.scores && user.scores.length > 0"
+        class="table table-hover table-striped mt-3 shadow-sm"
+      >
+        <thead class="table-dark">
+          <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(score, index) in user.scores" :key="index">
+            <td>{{ score.date }}</td>
+            <td>{{ score.category }}</td>
+            <td class="fw-bold text-primary">
+              {{ score.score }}/{{ score.total }} ({{ score.percentage }}%)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p v-else class="text-center text-muted">No quiz scores available.</p>
     </div>
   </div>
 </template>
@@ -159,7 +159,7 @@ export default {
         this.user.plan === "basic" &&
         !this.availableAvatars.includes(this.user.avatar)
       ) {
-        this.user.avatar = this.availableAvatars[0]; // forzar uno permitido
+        this.user.avatar = this.availableAvatars[0];
       }
 
       persistUser(this.user);

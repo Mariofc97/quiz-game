@@ -38,9 +38,7 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">More control</h5>
-              <p class="card-text">
-                The same conditions as Basic Plan but with:
-              </p>
+              <p class="card-text">Only for smarty pants 😉:</p>
               <ul class="mb-3">
                 <li>Unlimited tries</li>
                 <li>More Avatars</li>

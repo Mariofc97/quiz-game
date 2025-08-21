@@ -5,12 +5,10 @@
     :aria-label="`Open ${name}`"
   >
     <div class="flip-inner">
-      <!-- FRONT: icono -->
       <div class="face face-front">
         <i :class="['bi', iconClass]" aria-hidden="true"></i>
       </div>
 
-      <!-- BACK: texto -->
       <div class="face face-back">
         <h5 class="mb-1 text-dark text-center">{{ name }}</h5>
         <small class="text-muted">Tap to start</small>
@@ -30,14 +28,13 @@ export default {
     iconClass() {
       const n = this.name.toLowerCase();
 
-      // Mapeo flexible por palabras clave
       if (n.includes("general")) return "bi-lightbulb";
       if (n.includes("book")) return "bi-book";
       if (n.includes("film")) return "bi-film";
       if (n.includes("television")) return "bi-tv";
       if (n.includes("music")) return "bi-music-note-beamed";
       if (n.includes("musicals") || n.includes("theatre")) return "bi-mic";
-      if (n.includes("video game")) return "bi bi-controller"; // genérico (videojuegos)
+      if (n.includes("video game")) return "bi bi-controller";
       if (n.includes("board game")) return "bi-dice-5";
       if (n.includes("cartoon") || n.includes("animation"))
         return "bi-emoji-smile";
@@ -54,11 +51,10 @@ export default {
       if (n.includes("politics")) return "bi-building";
       if (n.includes("art")) return "bi-brush";
       if (n.includes("celeb")) return "bi-star-fill";
-      if (n.includes("animals")) return "bi-bug"; // sustituto simpático
+      if (n.includes("animals")) return "bi-bug";
       if (n.includes("vehicles")) return "bi bi-car-front-fill";
       if (n.includes("gadgets")) return "bi-phone";
 
-      // fallback
       return "bi-collection";
     },
   },
@@ -99,15 +95,12 @@ export default {
   place-items: center;
 }
 
-/* FRONT:*/
-
 .face-front .bi {
   font-size: 2rem;
   color: var(--primary, #7c3aed);
   text-shadow: 0 2px 6px rgba(124, 58, 237, 0.25);
 }
 
-/* BACK*/
 .face-back {
   transform: rotateY(180deg);
   padding: 12px 16px;

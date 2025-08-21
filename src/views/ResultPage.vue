@@ -23,7 +23,7 @@
           <h5 class="ans correct-ans">
             {{ quiz.correct_answer }}
           </h5>
-          <h5 class="correct-ans-text">Correct Answer</h5>
+          <h5 class="correct-ans-text d-none d-md-block">Correct Answer</h5>
         </div>
 
         <div style="position: relative">
@@ -44,7 +44,7 @@
           >
             {{ selectedAnswer[idx] }}
           </h5>
-          <h5 class="user-ans-text">Your Answer</h5>
+          <h5 class="user-ans-text d-none d-md-block">Your Answer</h5>
         </div>
       </div>
 

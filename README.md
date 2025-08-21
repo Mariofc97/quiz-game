@@ -1,5 +1,57 @@
-# Vue 3 + Vite
+This is a quiz game presented as a capstone project.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Tech: Vue and Bootstrap
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Author: Mario Ferrón Cano
+
+Structure:
+
+\---src
+    |   App.vue
+    |   main.js
+    |   style.css
+    |   
+    +---assets
+    |   |   banner.png
+    |   |   customerservice.png
+    |   |   quiz-icon-home.png
+    |   |   quiz_icon_mobile.png
+    |   |   
+    |   \---avatars
+    |           chameleon.png
+    |           cowboy.png
+    |           dog.png
+    |           frog.png
+    |           ghost.png
+    |           gundam.png
+    |           hacker.png
+    |           lion.png
+    |           Luffy.png
+    |           mummy.png
+    |           psyduck.png
+    |           staryu.png
+    |           teacher.png
+    |           tiger.png
+    |           user.png
+    |           whale.png
+    |           
+    +---components
+    |       CategoryCard.vue
+    |       LoadingSpinner.vue
+    |       UserAvatar.vue
+    |       
+    +---composables
+    |       usePlanLimit.js
+    |       
+    +---router
+    |       index.js
+    |       
+    \---views
+            CategoriesPage.vue
+            ContactSupport.vue
+            HomePage.vue
+            LoginPage.vue
+            ProfilePage.vue
+            QuizPage.vue
+            RegisterPage.vue
+            ResultPage.vue
