@@ -129,7 +129,7 @@ export default {
       localStorage.setItem("users", JSON.stringify(users));
       alert("You completed your registration. Please log in.");
 
-      // reset the form (must include the same fields the template v-models use)
+      // reset the form
       this.registerForm = {
         name: "",
         username: "",
